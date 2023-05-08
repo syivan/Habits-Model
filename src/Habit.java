@@ -4,16 +4,21 @@ public class Habit {
 
     public String name;
     public String description;
-    public ArrayList<Task> taskList;
+    public TaskCatalog taskCatalog;
     public boolean[] todoDays;
     public int currentStreak;
     public boolean isDone;
+    public int taskCount;
 
     public Habit(String name, String description) {
         this.name = name;
         this.description = description;
-        this.taskList = new ArrayList<>();
+        this.taskCatalog = new TaskCatalog();
+        this.todoDays = new boolean[]{false, false ,false, false, false, false, false};
+        this.currentStreak = 0;
+        this.isDone = false;
     }
+
     public String getName() {
         return name;
     }
@@ -46,6 +51,14 @@ public class Habit {
         this.currentStreak = currentStreak;
     }
 
+    public TaskCatalog getTaskCatalog() {
+        return taskCatalog;
+    }
+
+    public int getTaskCount() {
+        return taskCatalog.getSize();
+    }
+
     public boolean isDone() {
         return isDone;
     }
@@ -54,11 +67,5 @@ public class Habit {
         isDone = done;
     }
 
-    public void addTask(Task newTask) {
 
-    }
-
-    public void removeTask(Task newTask) {
-
-    }
 }
