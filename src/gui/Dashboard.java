@@ -5,20 +5,22 @@ import java.awt.*;
 
 public class Dashboard extends JPanel {
 
-    private HabitsPanel habitsPanel;
+    private HabitPanel habitPanel;
+    private ProgressPanel progressPanel;
+    private TaskPanel taskPanel;
+    private RewardPanel rewardPanel;
 
     public Dashboard() {
         this.setLayout(new GridLayout(2,2));
         this.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
-        habitsPanel = new HabitsPanel();
-        JButton b2 = new JButton("2");
-        JButton b3 = new JButton("3");
-        JButton b4 = new JButton("3");
-
-        this.add(habitsPanel);
-        this.add(b2);
-        this.add(b3);
-        this.add(b4);
+        habitPanel = new HabitPanel();
+        progressPanel = new ProgressPanel();
+        taskPanel = new TaskPanel();
+        rewardPanel = new RewardPanel();
+        this.add(habitPanel);
+        this.add(progressPanel);
+        this.add(taskPanel);
+        this.add(rewardPanel);
         this.setBorder(BorderFactory.createLineBorder(Color.black));
         this.setVisible(true);
 
