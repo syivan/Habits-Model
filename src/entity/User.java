@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+package entity;
 
 public class User {
 
@@ -6,6 +6,7 @@ public class User {
     private String lastName;
     private UserAccount userAccount;
     private HabitCatalog habitCatalog;
+    private TaskCatalog taskCatalog;
 
 
     public User(String firstName, String lastName, UserAccount userAccount) {
@@ -13,6 +14,7 @@ public class User {
         this.lastName = lastName;
         this.userAccount = userAccount;
         this.habitCatalog = new HabitCatalog();
+        this.taskCatalog = new TaskCatalog();
     }
 
     public void setFirstName(String firstName) {
@@ -35,4 +37,11 @@ public class User {
         return this.userAccount;
     }
 
+    public HabitCatalog getHabitCatalog() {
+        return this.habitCatalog;
+    }
+
+    public TaskCatalog getTaskCatalog() {
+        return this.taskCatalog;
+    }
 }

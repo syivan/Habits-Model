@@ -1,3 +1,5 @@
+package entity;
+
 public class UserAccount {
 
     private String email;
@@ -22,6 +24,10 @@ public class UserAccount {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String toString() {
+        return String.format("Email: %s\nPassword: %s\n", email, password);
     }
 
 }
