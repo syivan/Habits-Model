@@ -23,12 +23,6 @@ public class Dashboard extends JPanel {
         this.add(rewardPanel);
         this.setBorder(BorderFactory.createLineBorder(Color.black));
         this.setVisible(true);
-
-    }
-
-    private void intializeComponents() {
-
-
     }
 
 
