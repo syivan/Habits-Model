@@ -10,5 +10,6 @@ public class HabitPanel extends JPanel {
         this.setBorder(BorderFactory.createTitledBorder("Habits"));
         setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(5,5,5,5);
     }
 }
